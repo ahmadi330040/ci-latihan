@@ -6,17 +6,22 @@ use App\Models\KomikModel;
 
 class Komik extends BaseController
 {
+    protected $KomikModel;
+
+    public function __construct()
+    {
+        $this->KomikModel = new KomikModel();
+    }
     public function index()
-    {   $data = [
-        'title' => 'Daftar Komik'
+    {
+        $data = $this->KomikModel->findAll();
+
+        $data = [
+        'title' => 'Daftar Komik',
+        'komik' => $data
     ];
 
-    $komikModel = new KomikModel();
-    $komik = $komikModel->findAll();
-    dd($komik);
-
-    return view('komik/index', $data);
+    return view('komik/index', $data,);
     }
-
 
 }

@@ -7,6 +7,7 @@
         <div class="col">
             <h1>Daftar Komik</h1>
             <table class="table">
+                
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -16,12 +17,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach ($komik as $k) : ?>
                     <tr>
                     <th scope="row">1</th>
-                    <td><img src="/img/esaldoku1.png" alt="" class="sampul"></td>
-                    <td>Naruto</td>
+                    <td><img src="<?= $k['imgpath']; ?>" alt="" class="sampul"></td>
+                    <td><?= $k['judul']; ?></td>
                     <td><a href="" class="btn btn-success">Detail</a></td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

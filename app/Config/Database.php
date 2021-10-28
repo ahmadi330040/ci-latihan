@@ -32,13 +32,13 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1',
-        'username' => 'root',
-        'password' => 'root',
-        'database' => 'latihan',
+        'hostname' => 'mypay.co.id',
+        'username' => 'mypayco_mypaymin',
+        'password' => 'Piknik90!',
+        'database' => 'mypayco_mypay',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
-        'pConnect' => false,
+        'pConnect' => true,
         'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
